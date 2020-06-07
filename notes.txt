@@ -1,0 +1,11 @@
+installed packages:
+- dotenv: to store database, port
+- nodeomon: keeps the server running and updating in real time
+- mongoose: to connect to the database
+- uuidv1
+- crypto: to encrypt a password using hash
+- body-parser
+- morgan: gives whatever routes requested in the console (good for development)
+- express-validator (v 5.3.1): use methods like check to check if something required is missing. Sends friendly error messages.
+- express-jwt
+- jsonwebtoken
