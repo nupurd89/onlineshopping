@@ -18,20 +18,20 @@ const Menu = ({history}) => (
   <div>
     <ul className="nav nav-tabs bg-dark">
       <li className="nav-item">
-        <Link className = "nav-link" style={isActive(history, '/')} to="/">
+        <Link className = "nav-link" style={isActive(history, '/onlineshopping')} to="/onlineshopping">
           Home
         </Link>
       </li>
 
       <li className="nav-item">
-        <Link className = "nav-link" style={isActive(history, '/shop')} to="/shop">
+        <Link className = "nav-link" style={isActive(history, '/onlineshopping/shop')} to="/onlineshopping/shop">
           Shop
         </Link>
       </li>
 
       {isAuthenticated() && isAuthenticated().user.role === 0 && (
         <li className="nav-item">
-          <Link className = "nav-link" style={isActive(history, '/user/dashboard')} to="/user/dashboard">
+          <Link className = "nav-link" style={isActive(history, '/onlineshopping/user/dashboard')} to="/onlineshopping/user/dashboard">
             Dashboard
           </Link>
         </li>
@@ -39,7 +39,7 @@ const Menu = ({history}) => (
 
       {isAuthenticated() && isAuthenticated().user.role === 1 && (
         <li className="nav-item">
-          <Link className = "nav-link" style={isActive(history, '/admin/dashboard')} to="/admin/dashboard">
+          <Link className = "nav-link" style={isActive(history, '/onlineshopping/admin/dashboard')} to="/onlineshopping/admin/dashboard">
             Dashboard
           </Link>
         </li>
@@ -48,12 +48,12 @@ const Menu = ({history}) => (
       {!isAuthenticated() && (
         <Fragment>
           <li className="nav-item">
-            <Link className = "nav-link" style={isActive(history, '/Signin')} to="/Signin">
+            <Link className = "nav-link" style={isActive(history, '/onlineshopping/Signin')} to="/onlineshopping/Signin">
               Signin
             </Link>
           </li>
           <li className="nav-item">
-            <Link className = "nav-link" style={isActive(history, '/Signup')} to="/Signup">
+            <Link className = "nav-link" style={isActive(history, '/onlineshopping/Signup')} to="/onlineshopping/Signup">
               Signup
             </Link>
           </li>
@@ -66,7 +66,7 @@ const Menu = ({history}) => (
           className = "nav-link"
           style={{cursor: 'pointer', color: '#ffffff'}}
            onClick ={() => signout(() => {
-             history.push("/");
+             history.push("/onlineshopping/");
            })}
            >
           Signout

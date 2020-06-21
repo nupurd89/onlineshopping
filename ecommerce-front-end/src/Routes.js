@@ -16,14 +16,14 @@ const Routes = () => {
     <div>
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact component = {Home}/>
-        <Route path="/shop" exact component = {Shop}/>
-        <Route path="/signin" exact component = {Signin}/>
-        <Route path="/signup" exact component = {Signup}/>
-        <PrivateRoute path="/user/dashboard" exact component = {Dashboard} />
-        <AdminRoute path="/admin/dashboard" exact component = {AdminDashboard} />
-        <AdminRoute path="/create/category" exact component = {AddCategory} />
-        <AdminRoute path="/create/product" exact component = {AddProduct} />
+        <Route path="/onlineshopping" exact component = {Home}/>
+        <Route path="/onlineshopping/shop" exact component = {Shop}/>
+        <Route path="/onlineshopping/signin" exact component = {Signin}/>
+        <Route path="/onlineshopping/signup" exact component = {Signup}/>
+        <PrivateRoute path="/onlineshopping/user/dashboard" exact component = {Dashboard} />
+        <AdminRoute path="/onlineshopping/admin/dashboard" exact component = {AdminDashboard} />
+        <AdminRoute path="/onlineshopping/create/category" exact component = {AddCategory} />
+        <AdminRoute path="/onlineshopping/create/product" exact component = {AddProduct} />
       </Switch>
     </BrowserRouter>
     </div>
